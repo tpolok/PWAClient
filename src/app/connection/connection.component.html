@@ -1,0 +1,30 @@
+<p>
+  connection works!
+</p>
+
+<table>
+  <tr>
+      <th>Client Name</th>
+      <th>Gender</th>
+      <th>Country</th>
+      <th>City</th>
+  </tr>
+  <tr *ngFor="let client of _clients" [attr.data-id]="client.Id">
+      <td>{{client.Name}}
+      </td>
+      <td>{{client.Gender=='m'?'Male':'Female'}}
+      </td>
+      <td>{{client.Country}}
+      </td>
+      <td>{{client.City}}</td>
+  </tr>
+  </table>
+
+  <td><input type="text" [(ngModel)]="_newClient.Name" /></td>
+  <td><input type="password" [(ngModel)]="_newClient.Password" /></td>
+  <button (click)="checkClient()">Connection</button>
+
+<nav><a routerLink="../connected" routerLinkActive="active">Connected</a>
+  <a routerLink="../register" routerLinkActive="active">register</a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+<p>
+  register works!
+</p>
+<table>
+  <tr>
+    <td><input type="text" [(ngModel)]="_newClient.Name" /></td>
+    <td>
+      <select [(ngModel)]="_newClient.Gender">
+        <option value="m">Male</option>
+        <option value="f">FeMale</option>
+      </select>
+      <td><input type="text" [(ngModel)]="_newClient.Country" /></td>
+      <td><input type="text" [(ngModel)]="_newClient.City" /></td>
+      <td><input type="password" [(ngModel)]="_newClient.Password" /></td>
+      <td>
+        <button (click)="addClient()">Add</button>
+      </td>
+      <td>
+        <button (click)="clearNewClient()">Cancel</button>
+      </td>
+  </tr>
+</table>
